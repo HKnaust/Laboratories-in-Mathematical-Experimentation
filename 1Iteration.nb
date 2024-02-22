@@ -1,0 +1,184 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6282,        176]
+NotebookOptionsPosition[      4924,        147]
+NotebookOutlinePosition[      5397,        164]
+CellTagsIndexPosition[      5354,        161]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Math 2325
+Project 1 (Chapter 1) - Iteration of Linear Functions\
+\>", "Subtitle",ExpressionUUID->"0fd35a5d-3a08-4d79-b4a1-8c9a28e0e511"],
+
+Cell["\<\
+Helmut Knaust, Department of Mathematical Sciences, UTEP, El Paso TX 79968
+hknaust@utep.edu
+9/23/2003; last edit 8/21/2020\
+\>", "Subsubtitle",
+ CellChangeTimes->{{3.4243288721848*^9, 3.4243288949948*^9}, {
+  3.4298122889207277`*^9, 3.429812343379035*^9}, {3.431276097858964*^9, 
+  3.431276106546575*^9}, {3.44080958371725*^9, 3.44080958530825*^9}, {
+  3.44081276583045*^9, 3.44081276615805*^9}, {3.495966581959772*^9, 
+  3.4959665855945787`*^9}, {3.5552348211639423`*^9, 
+  3.555234823779092*^9}},ExpressionUUID->"eff0d04d-3b5d-489a-abd2-\
+22ba91951c41"],
+
+Cell[TextData[StyleBox["Every time you open a notebook, you need to evaluate \
+the command(s) containing \":=\" first.\nTo evaluate a command, click on the \
+cell bracket on the right adjacent to the command, then hit \[ShiftKey] and \
+\[EnterKey] simultaneously.",
+ FontColor->RGBColor[0, 0, 1]]], "Text",
+ InitializationCell->False,
+ CellChangeTimes->{{3.8070325901600122`*^9, 3.8070325910550213`*^9}, {
+   3.807365186276797*^9, 3.807365197996591*^9}, 
+   3.838674141500687*^9},ExpressionUUID->"1c6db03e-a47f-4db4-a96a-\
+e7ea477fc427"],
+
+Cell[CellGroupData[{
+
+Cell["Iterations", "Section",ExpressionUUID->"ce1df57e-6a08-4eb9-bb8f-b9a559740131"],
+
+Cell[TextData[{
+ "The following command produces a list of the first ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+   "n", Cell[
+    "iterations of the function  ",ExpressionUUID->
+     "9ccf648c-1db5-4dc7-9060-94605dd575a0"]}], TraditionalForm]],
+  ExpressionUUID->"1e0b98f7-e9c7-4f98-b2fe-02ad15f0f596"],
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     RowBox[{"a", " ", "x"}], "+", "b"}]}], TraditionalForm]],ExpressionUUID->
+  "8839996f-b38d-4603-97e4-2fe89847d8ed"],
+ " with initial value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "."}], TraditionalForm]],ExpressionUUID->
+  "7868e58c-831d-4053-a8a6-a550a9ec3169"]
+}], "Text",ExpressionUUID->"f7abb5de-17ba-4c03-9be2-6156a36bd177"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Iteration", "[", 
+   RowBox[{"a_", ",", "b_", ",", "n_", ",", "x0_"}], "]"}], ":=", 
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{"Function", "[", 
+     RowBox[{"x", ",", 
+      RowBox[{
+       RowBox[{"a", " ", "x"}], "+", "b"}]}], "]"}], ",", "x0", ",", "n"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5552345758239098`*^9, 3.555234591526808*^9}},
+ CellLabel->"In[1]:= ",ExpressionUUID->"e79a8ab6-6e32-410e-a4d1-12a529bfa97a"],
+
+Cell[TextData[{
+ "Here is an example: ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "(", "x", ")"}], "=", 
+     RowBox[{
+      RowBox[{"1.1", "x"}], "-", "2.3"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"initial", " ", "value", " ", 
+      SubscriptBox["x", "0"]}], "=", "0.4"}], ",", " ", 
+    RowBox[{"100", " ", 
+     RowBox[{"iterations", "."}]}]}], TraditionalForm]],ExpressionUUID->
+  "f67aa6ff-fd2a-410d-8c77-6b31c76cb7c7"],
+ " The sequence of iterations seems to diverge."
+}], "Text",ExpressionUUID->"2720a614-4564-46b1-989e-b7903cebedab"],
+
+Cell[BoxData[
+ RowBox[{"Iteration", "[", 
+  RowBox[{"1.1", ",", 
+   RowBox[{"-", "2.3"}], ",", "100", ",", "0.4"}], "]"}]], "Input",ExpressionU\
+UID->"ca6450e0-c6cf-47db-b270-da6fd63d8294"],
+
+Cell[TextData[{
+ "Here are the first 80 iterations of the function ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"f", "(", "x", ")"}], "=", 
+    RowBox[{
+     RowBox[{"0.8", " ", "x"}], "+", "2.313"}]}], TraditionalForm]],
+  ExpressionUUID->"1c2b9d75-f6dd-4e0a-a78d-b4ddbdeb2c2c"],
+ " with initial value ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["x", "0"], "=", 
+    RowBox[{
+     RowBox[{"114.7", ".", " ", "The"}], " ", "sequence", " ", "of", " ", 
+     "iterations", " ", "seems", " ", "to", " ", 
+     RowBox[{"converge", "."}]}]}], TraditionalForm]],ExpressionUUID->
+  "98d421fb-0a0f-4bc6-9a19-6f140b2a14e2"]
+}], "Text",ExpressionUUID->"5b849e20-d5ad-4ca4-b017-53c794e46df2"],
+
+Cell[BoxData[
+ RowBox[{"Iteration", "[", 
+  RowBox[{"0.8", ",", "2.313", ",", "80", ",", "114.7"}], "]"}]], "Input",
+ CellChangeTimes->{{3.55523461026188*^9, 
+  3.555234628381916*^9}},ExpressionUUID->"746f823c-732c-42dc-8079-\
+f885af882ccb"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1204, 801},
+WindowMargins->{{24, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.2 for Microsoft Windows (64-bit) (December 12, 2020)",
+StyleDefinitions->FrontEnd`FileName[{"Creative"}, "NaturalColor.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"85c55eb0-7c0a-4f86-bb03-165d71cfb002"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 146, 3, 40, "Subtitle",ExpressionUUID->"0fd35a5d-3a08-4d79-b4a1-8c9a28e0e511"],
+Cell[729, 27, 565, 11, 56, "Subsubtitle",ExpressionUUID->"eff0d04d-3b5d-489a-abd2-22ba91951c41"],
+Cell[1297, 40, 537, 9, 51, "Text",ExpressionUUID->"1c6db03e-a47f-4db4-a96a-e7ea477fc427",
+ InitializationCell->False],
+Cell[CellGroupData[{
+Cell[1859, 53, 84, 0, 75, "Section",ExpressionUUID->"ce1df57e-6a08-4eb9-bb8f-b9a559740131"],
+Cell[1946, 55, 756, 22, 33, "Text",ExpressionUUID->"f7abb5de-17ba-4c03-9be2-6156a36bd177"],
+Cell[2705, 79, 474, 12, 40, "Input",ExpressionUUID->"e79a8ab6-6e32-410e-a4d1-12a529bfa97a"],
+Cell[3182, 93, 572, 16, 33, "Text",ExpressionUUID->"2720a614-4564-46b1-989e-b7903cebedab"],
+Cell[3757, 111, 189, 4, 40, "Input",ExpressionUUID->"ca6450e0-c6cf-47db-b270-da6fd63d8294"],
+Cell[3949, 117, 703, 19, 33, "Text",ExpressionUUID->"5b849e20-d5ad-4ca4-b017-53c794e46df2"],
+Cell[4655, 138, 241, 5, 40, "Input",ExpressionUUID->"746f823c-732c-42dc-8079-f885af882ccb"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

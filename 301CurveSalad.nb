@@ -1,0 +1,99 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+"\<Math 2325 
+Project 3 (Chapter 9) - Parametric Curve Representation\>",
+"Subtitle",CellChangeTimes -> {{3.5580122067064233`*^9,3.5580122202171955`*^9}},ExpressionUUID -> "b00cebe0-2527-41b8-af12-0f0e79c00f88"],Cell[
+
+"\<Helmut Knaust, Department of Mathematical Sciences, UTEP, El Paso TX 79968
+hknaust@utep.edu
+10/8/2012.Last edits 10/3/2021.
+\>",
+"Subsubtitle",CellChangeTimes -> {{3.556418667770194`*^9,3.5564186738386045`*^9},{3.556418982875147`*^9,3.556418999333176`*^9},{3.556456662682284`*^9,3.55645667573203`*^9},{3.5568870859031496`*^9,3.5568870865511866`*^9},{3.558009967158328`*^9,3.558009968097382`*^9},{3.5580122635546746`*^9,3.558012370927816`*^9},{3.55801260352712`*^9,3.558012604791192`*^9},{3.558012693376259`*^9,3.5580126935982714`*^9},{3.5581062265021315`*^9,3.558106228996381`*^9},{3.558106270102491`*^9,3.5581062726537457`*^9},{3.5587198097787066`*^9,3.5587198446761303`*^9},{3.6968622480125732`*^9,3.696862249026573`*^9},{3.809955541614129`*^9,3.809955547830097`*^9}},
+ExpressionUUID -> "cb90eadf-9e69-4129-bd1c-88594f30d914"],Cell[
+CellGroupData[{Cell[
+
+"\<Curve Salad\>","Section",CellChangeTimes -> {{3.5587198579362154`*^9,3.5587198621170425`*^9}},
+ExpressionUUID -> "b21a9078-28cc-47d6-a789-31180cc529c0"],Cell[
+BoxData[RowBox[{RowBox[
+{RowBox[{"We"," ","can"," ","think"," ","of"," ","the"," ","curve"," ",RowBox[{"(","\[NoBreak]",GridBox[
+{{ItemBox[StyleBox[RowBox[{"x","[","t","]"}],FontColor -> GrayLevel[0]]]},{ItemBox[
+StyleBox[RowBox[{"y","[","t","]"}],FontColor -> GrayLevel[0]]]}}],"\[NoBreak]",")"}]}],"=",RowBox[
+{RowBox[{RowBox[{RowBox[{"(",GridBox[{{ItemBox[RowBox[{StyleBox[RowBox[{"Sin","[",RowBox[
+{"p"," ","t"}],"]"}],FontColor -> RGBColor[0,0,1]],StyleBox["+",FontColor -> RGBColor[
+0,0,1]],StyleBox[RowBox[{"Cos","[",RowBox[{"q"," ","t"}],"]"}],FontColor -> RGBColor[
+0,1,0]]}]]},{ItemBox[RowBox[{StyleBox[RowBox[{"Sin","[",RowBox[{"r"," ","t"}],"]"}],
+FontColor -> RGBColor[0,1,0]],StyleBox["+",FontColor -> RGBColor[1,0,0]],StyleBox[
+RowBox[{"Cos","[",RowBox[{"s"," ","t"}],"]"}],FontColor -> RGBColor[0,0,1]]}]]}}],"\[NoBreak]",")"}]," ","as"," ","the"," ","sum"," ","of"," ","the"," ","two"," ","curves"," ",RowBox[
+{"(","\[NoBreak]",GridBox[{{ItemBox[StyleBox[RowBox[{"Cos","[",RowBox[{"q"," ","t"}],"]"}],
+FontColor -> RGBColor[0,1,0]]]},{ItemBox[StyleBox[RowBox[{"Sin","[",RowBox[{"r"," ","t"}],"]"}],
+FontColor -> RGBColor[0,1,0]]]}}],"\[NoBreak]",")"}],"and"," ",RowBox[{"(","\[NoBreak]",GridBox[
+{{ItemBox[StyleBox[RowBox[{"Sin","[",RowBox[{"p"," ","t"}],"]"}],FontColor -> RGBColor[
+0,0,1]]]},{ItemBox[StyleBox[RowBox[{"Cos","[",RowBox[{"s"," ","t"}],"]"}],FontColor -> RGBColor[
+0,0,1]]]}}],"\[NoBreak]",")"}]}],":","\n","q"}],"=",RowBox[{"r","=",RowBox[{RowBox[
+{"2"," ","means"," ","that"," ","the"," ","green"," ","dot"," ","on"," ","the"," ","green"," ","circle"," ","traverses"," ","the"," ","green"," ","circle"," ",RowBox[
+{"twice","."," ","The"}]," ","blue"," ","circle"," ","is"," ","centered"," ","at"," ","the"," ","green"," ",RowBox[
+{"dot",".","\n","p"}]}],"=",RowBox[{"s","=",RowBox[{"5"," ","means"," ","that"," ","the"," ","red"," ","dot"," ","on"," ","the"," ","blue"," ","circle"," ","rotates"," ","around"," ","the"," ","blue"," ","circle"," ","five"," ","times","  ","at"," ","the"," ","same"," ",RowBox[
+{"time",".","\n","If"}]," ","q"," ","and"," ","r"," ","are"," ","not"," ","equal"," ","to"," ","each"," ","other"}]}]}]}]}]}],","," ",RowBox[
+{"or"," ","p"," ","and"," ","s"," ","are"," ","unequal"}],","," ",RowBox[{"the"," ","picture"," ","will"," ","become"," ","much"," ",RowBox[
+{"messier",".","  "}]}]}]],"Text",CellChangeTimes -> {{3.5587205815780544`*^9,3.5587205953061423`*^9},{3.558720625539136`*^9,3.55872077905972`*^9},3.558721419724627`*^9},
+ExpressionUUID -> "8dd75913-bfc8-4368-b3f5-208853cb8c9b"],Cell[
+BoxData[RowBox[{RowBox[
+{"(*",RowBox[{"Do"," ","not"," ","change"," ","anything"," ","below"," ","this"," ","line"}],"*)"}],"\n",RowBox[
+{RowBox[{RowBox[{RowBox[{"{",RowBox[{"p",",","q",",","r",",","s"}],"}"}],"=",RowBox[
+{"{",RowBox[{"5",",","2",",","2",",","5"}],"}"}]}],";"}],"\[IndentingNewLine]",RowBox[
+{RowBox[{StyleBox[RowBox[{"x","[","t_","]"}],FontColor -> RGBColor[0,0,1]],StyleBox[
+"=",FontColor -> RGBColor[0,0,1]],RowBox[{StyleBox[RowBox[{"Sin","[",RowBox[{"p"," ","t"}],"]"}],
+FontColor -> RGBColor[0,0,1]],StyleBox["+",FontColor -> RGBColor[0,0,1]],StyleBox[
+RowBox[{"Cos","[",RowBox[{"q"," ","t"}],"]"}],FontColor -> RGBColor[0,1,0]]}]}],";"}],"\[IndentingNewLine]",RowBox[
+{RowBox[{StyleBox[RowBox[{"y","[","t_","]"}],FontColor -> RGBColor[1,0,0]],StyleBox[
+"=",FontColor -> RGBColor[1,0,0]],RowBox[{StyleBox[RowBox[{"Sin","[",RowBox[{"r"," ","t"}],"]"}],
+FontColor -> RGBColor[0,1,0]],StyleBox["+",FontColor -> RGBColor[1,0,0]],StyleBox[
+RowBox[{"Cos","[",RowBox[{"s"," ","t"}],"]"}],FontColor -> RGBColor[0,0,1]]}]}],";"}],"\[IndentingNewLine]",RowBox[
+{StyleBox[RowBox[{"endtime","=",RowBox[{"2","*","Pi"}]}],FontColor -> RGBColor[0.`,
+0.5019607843137255`,0.`]],";"}],"\[IndentingNewLine]",RowBox[{StyleBox[RowBox[{"win","=","2"}],
+FontColor -> RGBColor[0.5019607843137255`,0.`,0.5019607843137255`]],";"}],"\[IndentingNewLine]","\[IndentingNewLine]",RowBox[
+{"Animate","[",RowBox[{RowBox[{"Show","[","\[IndentingNewLine]",RowBox[{RowBox[{"ParametricPlot","[",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"Cos","[",RowBox[{"q"," ","u"}],"]"}],",",RowBox[{"Sin","[",RowBox[
+{"r"," ","u"}],"]"}]}],"}"}],",",RowBox[{"{",RowBox[{"u",",","0",",","t"}],"}"}],",",RowBox[
+{"PlotStyle","\[Rule]","Green"}],",",RowBox[{"PlotRange","\[Rule]",RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"-","win"}],",","win"}],"}"}],",",RowBox[{"{",RowBox[
+{RowBox[{"-","win"}],",","win"}],"}"}]}],"}"}]}],",",RowBox[{"Epilog","\[Rule]",RowBox[
+{"{",RowBox[{"Green",",",RowBox[{"AbsolutePointSize","[","5","]"}],",",RowBox[{"Point","[",RowBox[
+{"{",RowBox[{RowBox[{"Cos","[",RowBox[{"q"," ","t"}],"]"}],",",RowBox[{"Sin","[",RowBox[
+{"r"," ","t"}],"]"}]}],"}"}],"]"}]}],"}"}]}]}],"]"}],",","\[IndentingNewLine]",RowBox[
+{"ParametricPlot","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{RowBox[{"z",RowBox[{"(",RowBox[
+{RowBox[{"x","[","t","]"}],"-",RowBox[{"Cos","[",RowBox[{"q"," ","t"}],"]"}]}],")"}]}],"+",RowBox[
+{"Cos","[",RowBox[{"q"," ","t"}],"]"}]}],",",RowBox[{RowBox[{"z",RowBox[{"(",RowBox[
+{RowBox[{"y","[","t","]"}],"-",RowBox[{"Sin","[",RowBox[{"r"," ","t"}],"]"}]}],")"}]}],"+",RowBox[
+{"Sin","[",RowBox[{"r"," ","t"}],"]"}]}]}],"}"}],",",RowBox[{"{",RowBox[{"z",",","0",",","1"}],"}"}],",",RowBox[
+{"PlotStyle","\[Rule]","Dashed"}],",",RowBox[{"PlotRange","\[Rule]",RowBox[{"{",RowBox[
+{RowBox[{"{",RowBox[{RowBox[{"-","win"}],",","win"}],"}"}],",",RowBox[{"{",RowBox[
+{RowBox[{"-","win"}],",","win"}],"}"}]}],"}"}]}]}],"]"}],",","\[IndentingNewLine]",RowBox[
+{"ParametricPlot","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{RowBox[{"Cos","[",RowBox[
+{"q"," ","t"}],"]"}],"+",RowBox[{"Sin","[",RowBox[{"p"," ","v"}],"]"}]}],",",RowBox[
+{RowBox[{"Sin","[",RowBox[{"r"," ","t"}],"]"}],"+",RowBox[{"Cos","[",RowBox[{"s"," ","v"}],"]"}]}]}],"}"}],",",RowBox[
+{"{",RowBox[{"v",",","0",",","endtime"}],"}"}],",",RowBox[{"PlotRange","\[Rule]",RowBox[
+{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"-","win"}],",","win"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"-","win"}],",","win"}],"}"}]}],"}"}]}]}],"]"}],",","\[IndentingNewLine]",RowBox[
+{"ParametricPlot","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"x","[","u","]"}],",",RowBox[
+{"y","[","u","]"}]}],"}"}],",",RowBox[{"{",RowBox[{"u",",","0",",","t"}],"}"}],","," ",RowBox[
+{"PlotRange"," ","\[Rule]"," ",RowBox[{"{",RowBox[{RowBox[{"{",RowBox[{RowBox[{"-","win"}],",","win"}],"}"}],",",RowBox[
+{"{",RowBox[{RowBox[{"-","win"}],",","win"}],"}"}]}],"}"}]}],",","\[IndentingNewLine]",RowBox[
+{"PlotStyle","\[Rule]",RowBox[{"Directive","[",RowBox[{"Thick",",","Black"}],"]"}]}]}],"]"}],",",RowBox[
+{"Graphics","[",RowBox[{"{",RowBox[{"Red",",",RowBox[{"Thickness","[",".01","]"}],",",RowBox[
+{"Circle","[",RowBox[{RowBox[{"{",RowBox[{RowBox[{"x","[","t","]"}],",",RowBox[{"y","[","t","]"}]}],"}"}],",",".02"}],"]"}]}],"}"}],"]"}],",","\[IndentingNewLine]",RowBox[
+{"Graphics","[",RowBox[{"Text","[",RowBox[{RowBox[{"StringJoin","[",RowBox[{"\"t = \"",",",RowBox[
+{"ToString","[",RowBox[{"NumberForm","[",RowBox[{RowBox[{"t","/","Pi"}],",",RowBox[
+{"{",RowBox[{"2",",","1"}],"}"}]}],"]"}],"]"}],",",RowBox[{"ToString","[",RowBox[
+{"Pi",",","StandardForm"}],"]"}]}],"]"}],",",RowBox[{"{",RowBox[{RowBox[{".75","win"}],",",RowBox[
+{".95","win"}]}],"}"}]}],"]"}],"]"}]}],"]"}],",","\[IndentingNewLine]",RowBox[{"{",RowBox[
+{"t",",",RowBox[{"endtime","/",RowBox[{"10.","^","5"}]}],",","endtime"}],"}"}],",",RowBox[
+{"AnimationRepetitions","\[Rule]","1"}],",",RowBox[{"AnimationRate","\[Rule]","0.02"}],",",RowBox[
+{"AppearanceElements","\[Rule]","\"ResetButton\""}],",",RowBox[{"ControlPlacement","\[Rule]","Bottom"}]}],"]"}]}]}]],
+"Input",CellChangeTimes -> {{3.431095885271125`*^9,3.431095891350761`*^9},{3.4310959588272467`*^9,3.431095968041534`*^9},{3.4437882262917013`*^9,3.4437882285077877`*^9},{3.443788678004786`*^9,3.4437887098745193`*^9},{3.4437889464862537`*^9,3.4437890130292187`*^9},{3.443789199488348`*^9,3.443789220942855`*^9},{3.443789388628509`*^9,3.443789419412266`*^9},{3.443789718552186`*^9,3.4437897651053762`*^9},{3.443789816075261`*^9,3.443789915093945`*^9},{3.443790039459775`*^9,3.443790129892799`*^9},{3.443790347032714`*^9,3.443790355347315`*^9},{3.558012391687003`*^9,3.558012559906625`*^9},{3.558012826819892`*^9,3.5580129104346743`*^9},{3.5580131793450546`*^9,3.5580131987211633`*^9},{3.5580132759165783`*^9,3.5580132809118643`*^9},{3.55801331615988`*^9,3.5580133190860476`*^9},{3.558013360757431`*^9,3.5580134488144674`*^9},{3.558013479502223`*^9,3.558013515150262`*^9},{3.5580135976189785`*^9,3.5580136297228146`*^9},{3.558013669406085`*^9,3.5580136721712427`*^9},{3.5580137088683414`*^9,3.5580137261883326`*^9},{3.55801456692542`*^9,3.5580146448768787`*^9},{3.5580146762606735`*^9,3.55801471938814`*^9},3.558014764994749`*^9,{3.5581064472182007`*^9,3.558106481547633`*^9},{3.558714066205911`*^9,3.5587142135929823`*^9},{3.55871436689266`*^9,3.55871443852878`*^9},{3.5587145371929245`*^9,3.5587145676281195`*^9},{3.5587146055441055`*^9,3.558714605893041`*^9},{3.558714648487169`*^9,3.558714692476637`*^9},{3.5587149411735697`*^9,3.558714978852356`*^9},{3.558715024436855`*^9,3.5587150272159095`*^9},3.55871507966807`*^9,{3.558715176203637`*^9,3.5587152434637675`*^9},3.558715349735171`*^9,{3.5587153971204844`*^9,3.5587153976664314`*^9},{3.5587155689894266`*^9,3.5587156131790814`*^9},{3.5587156581547384`*^9,3.558715692368491`*^9},{3.558715804253194`*^9,3.5587160204340787`*^9},{3.5587160980921354`*^9,3.5587161035232115`*^9},{3.5587162751811466`*^9,3.5587162759410405`*^9},{3.5587165513317842`*^9,3.5587165777726865`*^9},{3.5587166533535433`*^9,3.5587166803842373`*^9},3.5587175556596603`*^9,{3.558718064720298`*^9,3.5587180662703133`*^9},{3.5587199298682766`*^9,3.5587200124396057`*^9},{3.558720051455456`*^9,3.558720130828765`*^9},3.558720162044565`*^9,{3.5587202187041283`*^9,3.5587203201983786`*^9},{3.5587203658754716`*^9,3.558720366405875`*^9},{3.558720490957073`*^9,3.5587205216736703`*^9},{3.5587207908533955`*^9,3.5587207962510304`*^9},{3.558720883361989`*^9,3.5587208853744016`*^9},{3.5587209282122765`*^9,3.558720928274677`*^9},{3.5587210032487574`*^9,3.5587210125464168`*^9},{3.558721085118082`*^9,3.5587210856484857`*^9},{3.558721159327758`*^9,3.558721167018607`*^9},{3.558721253162359`*^9,3.558721257748789`*^9},{3.558721341100123`*^9,3.5587213602102456`*^9},{3.8099548803378477`*^9,3.8099548808622026`*^9},{3.842273242238414`*^9,3.842273246302717`*^9},{3.8422733088656054`*^9,3.8422733130649223`*^9},{3.842273358707532`*^9,3.842273360139627`*^9},{3.842273403176227`*^9,3.8422734040053453`*^9},{3.8422734567303033`*^9,3.8422734767085114`*^9},{3.842273536461358`*^9,3.842273540920576`*^9},{3.842273597616626`*^9,3.8422736000291295`*^9},{3.8422756250150337`*^9,3.842275628609359`*^9}},
+CellLabel -> "In[1]:= ",ExpressionUUID -> "eed98a59-0f7c-4d07-b05e-786ccc6d175e"]},
+Open],ExpressionUUID -> "0eb36a11-0967-44e1-822c-f8a021a98188"]},Open],ExpressionUUID -> "ebf38e30-0651-402f-9ec7-66b9efd3b005"]},
+StyleDefinitions -> FrontEnd`FileName[{"Creative"},"NaturalColor.nb",CharacterEncoding -> "UTF-8"],
+ShowSelection -> True,WindowSize -> {1008.`,574.8`},WindowMargins -> {{Automatic,0.6000000000001364`},{Automatic,0}},
+FrontEndVersion -> "13. for Wolfram Cloud 1.61.2 (November 30, 2021)",CellContext -> Notebook,
+ExpressionUUID -> "9eaa54d3-1584-4669-a599-a783333ddfb8"]

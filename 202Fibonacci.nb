@@ -1,0 +1,376 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     13156,        367]
+NotebookOptionsPosition[     12020,        325]
+NotebookOutlinePosition[     12442,        341]
+CellTagsIndexPosition[     12399,        338]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Fibonacci Numbers", "Title",
+ CellChangeTimes->{{3.406026826163*^9, 3.4060268501210003`*^9}, {
+  3.495966555720526*^9, 3.4959665563445272`*^9}, {3.552392839208398*^9, 
+  3.5523928547202854`*^9}, {3.556222484256274*^9, 3.5562225044427094`*^9}, {
+  3.6954787329828215`*^9, 3.695478739855665*^9}}],
+
+Cell["\<\
+Helmut Knaust, Department of Mathematical Sciences, UTEP, El Paso TX 79968
+hknaust@utep.edu
+2/8/2017\
+\>", "Subsubtitle",
+ CellChangeTimes->{{3.4243288721848*^9, 3.4243288949948*^9}, {
+  3.4298122889207277`*^9, 3.429812343379035*^9}, {3.431276097858964*^9, 
+  3.431276106546575*^9}, {3.44080958371725*^9, 3.44080958530825*^9}, {
+  3.44081276583045*^9, 3.44081276615805*^9}, {3.495966581959772*^9, 
+  3.4959665855945787`*^9}, {3.5562225091851177`*^9, 3.556222517889933*^9}, {
+  3.5599242154202175`*^9, 3.5599242240745945`*^9}, {3.693838559785921*^9, 
+  3.6938385707988615`*^9}, {3.695478743493267*^9, 3.695478750095155*^9}}],
+
+Cell["Fibonacci[200] gives the 200th Fibonacci number:", "Text",
+ CellChangeTimes->{{3.6954804180424633`*^9, 3.6954804581659207`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Fibonacci", "[", "200", "]"}]], "Input",
+ CellChangeTimes->{{3.695480430553744*^9, 3.6954804604903355`*^9}}],
+
+Cell[BoxData[
+ FormBox["280571172992510140037611932413038677189525", 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.695480436575382*^9, 3.695480461348341*^9}}]
+}, Open  ]],
+
+Cell["\<\
+
+The command computes the first K Fibonacci numbers.\
+\>", "Text",
+ CellChangeTimes->{{3.5562278375912824`*^9, 3.556227934171052*^9}, 
+   3.5562279901283503`*^9, {3.556228190198702*^9, 3.5562281980611153`*^9}, {
+   3.6954787556045313`*^9, 3.6954787809820013`*^9}, {3.6954788704430447`*^9, 
+   3.6954788711921954`*^9}, {3.695480390851489*^9, 3.6954804159832506`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"K", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Fibonacci", "[", "n", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "1", ",", "K"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.429967361117*^9, 3.429967442324*^9}, {3.429967507448*^9,
+    3.429967629553*^9}, {3.429967660031*^9, 3.429967671903*^9}, 
+   3.429967719501*^9, {3.4299677519379997`*^9, 3.429967754226*^9}, {
+   3.429967807071*^9, 3.429967836149*^9}, {3.4299678670290003`*^9, 
+   3.42996788629*^9}, 3.429967921289*^9, {3.429967978486*^9, 
+   3.429968029274*^9}, {3.556222721419896*^9, 3.5562227985152316`*^9}, {
+   3.5562228516197248`*^9, 3.5562229014930124`*^9}, {3.556223031597241*^9, 
+   3.5562230688501062`*^9}, {3.5562231097065783`*^9, 3.556223156756261*^9}, {
+   3.556223200607938*^9, 3.5562232185947695`*^9}, {3.556223331648168*^9, 
+   3.5562233771690483`*^9}, {3.5562234195699224`*^9, 3.556223420256324*^9}, {
+   3.5562234627663984`*^9, 3.556223466760005*^9}, {3.5562236238678813`*^9, 
+   3.5562236258022847`*^9}, {3.5562236998244147`*^9, 3.556223704707223*^9}, {
+   3.5562239193636007`*^9, 3.556223936944831*^9}, {3.5562239685972867`*^9, 
+   3.556223975320898*^9}, 3.5562240488282275`*^9, 3.556224105861928*^9, {
+   3.5562241400727882`*^9, 3.556224146203599*^9}, {3.5562241870600705`*^9, 
+   3.5562241882768726`*^9}, {3.556224310581087*^9, 3.556224323965911*^9}, {
+   3.556224375929602*^9, 3.5562244016540475`*^9}, {3.556224707211784*^9, 
+   3.556224748629857*^9}, {3.5562247802043123`*^9, 3.556224780843913*^9}, {
+   3.5562250865420504`*^9, 3.5562251060732846`*^9}, {3.556225169970997*^9, 
+   3.5562251708601985`*^9}, {3.5562252335723085`*^9, 3.556225259967555*^9}, {
+   3.556225303772432*^9, 3.5562253119000463`*^9}, {3.5562254149226274`*^9, 
+   3.5562254882271557`*^9}, {3.556225527180424*^9, 3.556225529239628*^9}, {
+   3.5562255621556854`*^9, 3.5562256397814217`*^9}, 3.5562257039599347`*^9, {
+   3.5562257418992014`*^9, 3.5562257595584326`*^9}, {3.5562259083046937`*^9, 
+   3.556225913171902*^9}, {3.556225952967572*^9, 3.556225956165578*^9}, 
+   3.556226343498658*^9, {3.556226399705557*^9, 3.556226457893659*^9}, {
+   3.5562265243029757`*^9, 3.5562265319625893`*^9}, {3.5562266374655743`*^9, 
+   3.556226676403243*^9}, {3.5562267087108994`*^9, 3.55622672039532*^9}, {
+   3.556226764200197*^9, 3.5562267775538206`*^9}, {3.5562268519191513`*^9, 
+   3.556226859750365*^9}, {3.5562269152708626`*^9, 3.5562269211052723`*^9}, 
+   3.556227304865947*^9, {3.556227342009612*^9, 3.5562273457068186`*^9}, {
+   3.556228011703188*^9, 3.5562281566118426`*^9}, {3.556466577103869*^9, 
+   3.556466578078966*^9}, {3.695478793062052*^9, 3.6954788858162355`*^9}, {
+   3.695480332023302*^9, 3.6954803338953257`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "1", ",", "1", ",", "2", ",", "3", ",", "5", ",", "8", ",", "13", ",", 
+    "21", ",", "34", ",", "55", ",", "89", ",", "144", ",", "233", ",", "377",
+     ",", "610", ",", "987", ",", "1597", ",", "2584", ",", "4181", ",", 
+    "6765"}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.695478865261421*^9, 3.6954788872208924`*^9}, 
+   3.6954802815410547`*^9, 3.6954803353461447`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Fibonacci", "[", "n", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "K"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.69548027339775*^9, 3.6954802768921947`*^9}, {
+  3.6954803272496405`*^9, 3.695480327764447*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  GraphicsBox[{{}, {{}, 
+     {RGBColor[0.368417, 0.506779, 0.709798], PointSize[
+      0.019444444444444445`], AbsoluteThickness[1.6], PointBox[CompressedData["
+1:eJxTTMoPSmViYGAQAWIQDQEf7FFpBgdUPocDqriAA6q4CBotAaUVoLQMlNZC
+EzeF0kpQ2hFKq0DoBm8oXw1CO4RB+RpQOgnVXIVcKF8HQk8oh/L1ILRAM5Rv
+AKFv9EH5hhD6ywwo3whCGyyB8o0hdOgGKN8EQufucgAAWCcb2Q==
+       "]]}, {}}, {}},
+   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+   Axes->{True, True},
+   AxesLabel->{None, None},
+   AxesOrigin->{0, 0},
+   DisplayFunction->Identity,
+   Frame->{{False, False}, {False, False}},
+   FrameLabel->{{None, None}, {None, None}},
+   FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+   GridLines->{None, None},
+   GridLinesStyle->Directive[
+     GrayLevel[0.5, 0.4]],
+   Method->{},
+   PlotRange->{{0., 20.}, {0, 3988.}},
+   PlotRangeClipping->True,
+   PlotRangePadding->{{
+      Scaled[0.02], 
+      Scaled[0.02]}, {
+      Scaled[0.02], 
+      Scaled[0.05]}},
+   Ticks->{Automatic, Automatic}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.695480277968609*^9, 3.695480284676695*^9}, 
+   3.695480335533347*^9}]
+}, Open  ]],
+
+Cell["\<\
+Fibonacci numbers grow nearly exponentially: The ratio between consecutive \
+Fibonacci numbers approaches a limit:\
+\>", "Text",
+ CellChangeTimes->{{3.695478920027437*^9, 3.695478954862931*^9}, {
+  3.6954792120521207`*^9, 3.695479229886007*^9}, {3.695479340789998*^9, 
+  3.695479342350165*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Fibonacci", "[", 
+      RowBox[{"n", "+", "1"}], "]"}], "/", 
+     RowBox[{"Fibonacci", "[", "n", "]"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "K"}], "}"}]}], "]"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.695478962572937*^9, 3.6954790064606647`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "1.`", ",", "2.`", ",", "1.5`", ",", "1.6666666666666667`", ",", "1.6`", 
+    ",", "1.625`", ",", "1.6153846153846154`", ",", "1.619047619047619`", ",",
+     "1.6176470588235294`", ",", "1.6181818181818182`", ",", 
+    "1.6179775280898876`", ",", "1.6180555555555556`", ",", 
+    "1.6180257510729614`", ",", "1.6180371352785146`", ",", 
+    "1.618032786885246`", ",", "1.618034447821682`", ",", 
+    "1.6180338134001253`", ",", "1.618034055727554`", ",", 
+    "1.6180339631667064`", ",", "1.6180339985218033`"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6954789915244784`*^9, 3.6954790072410297`*^9}, 
+   3.695480335533347*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "The limit equals",
+ StyleBox[" ",
+  FontSize->18],
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{"1", "+", 
+     SqrtBox["5"]}], "2"], TraditionalForm]],
+  FontSize->18],
+ ", called the \[OpenCurlyDoubleQuote]Golden Ratio\[CloseCurlyDoubleQuote]."
+}], "Text",
+ CellChangeTimes->{{3.6954790383619857`*^9, 3.695479095078679*^9}, {
+  3.6954792414944153`*^9, 3.695479251526952*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Print", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"Sqrt", "[", "5", "]"}]}], ")"}], "/", "2"}], ",", " ", 
+   "\"\< = \>\"", " ", ",", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      RowBox[{"Sqrt", "[", "5", "]"}]}], ")"}], "/", "2."}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.695479098448862*^9, 3.695479173014165*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{
+    RowBox[{
+     FractionBox["1", "2"], " ", 
+     RowBox[{"(", 
+      RowBox[{"1", "+", 
+       SqrtBox["5"]}], ")"}]}], "\[InvisibleSpace]", "\<\" = \"\>", 
+    "\[InvisibleSpace]", "1.618033988749895`"}],
+   SequenceForm[
+   Rational[1, 2] (1 + 5^Rational[1, 2]), " = ", 1.618033988749895],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{3.695479173435438*^9, 3.6954803355489473`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Why? Let' s call this limit L. Then for \[OpenCurlyDoubleQuote]very large\
+\[CloseCurlyDoubleQuote] n, L \
+\[OpenCurlyDoubleQuote]=\[CloseCurlyDoubleQuote] f(n+1)/f(n), but also L \
+\[OpenCurlyDoubleQuote]=\[CloseCurlyDoubleQuote] f(n)/f(n-1).\n\nThus ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", "=", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"f", "(", 
+        RowBox[{"n", "+", "1"}], ")"}], 
+       RowBox[{"f", "(", "n", ")"}]], "=", 
+      FractionBox[
+       RowBox[{"f", "(", "n", ")"}], 
+       RowBox[{"f", "(", 
+        RowBox[{"n", "-", "1"}], ")"}]]}]}],
+    FontSize->18], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \nUsing the definition of Fibonacci numbers, we can substitute \
+f(n+1)=f(n)+f(n-1) to obtain\n\n",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"f", "(", "n", ")"}], "+", 
+      RowBox[{"f", "(", 
+       RowBox[{"n", "-", "1"}], ")"}]}], 
+     RowBox[{"f", "(", "n", ")"}]], "=", 
+    FractionBox[
+     RowBox[{"f", "(", "n", ")"}], 
+     RowBox[{"f", "(", 
+      RowBox[{"n", "-", "1"}], ")"}]]}], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontSize->18],
+ "\n\nSimplifying and using the fact that ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", "=", 
+     FractionBox[
+      RowBox[{"f", "(", "n", ")"}], 
+      RowBox[{"f", "(", 
+       RowBox[{"n", "-", "1"}], ")"}]]}],
+    FontSize->18], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ ", we obtain the following quadratic equation for L:  ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{
+     RowBox[{"1", "+", "L"}], "=", 
+     FractionBox["1", "L"]}],
+    FontSize->18], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ "\nThis quadratic equation has one positive solution, namely ",
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    FractionBox[
+     RowBox[{"1", "+", 
+      SqrtBox["5"]}], "2"],
+    FontSize->18], TraditionalForm]]],
+ "\n\n"
+}], "Text",
+ CellChangeTimes->{{3.695479759558261*^9, 3.695479996166596*^9}, {
+  3.695480027008191*^9, 3.6954801219198084`*^9}, {3.695480156801855*^9, 
+  3.695480209124926*^9}}]
+}, Open  ]]
+},
+WindowSize->{1182, 882},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (September 9, 2014)",
+StyleDefinitions->FrontEnd`FileName[{"Creative"}, "NaturalColor.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 300, 4, 65, "Title"],
+Cell[882, 28, 633, 11, 56, "Subsubtitle"],
+Cell[1518, 41, 134, 1, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1677, 46, 132, 2, 41, "Input"],
+Cell[1812, 50, 166, 3, 40, "Output"]
+}, Open  ]],
+Cell[1993, 56, 376, 7, 49, "Text"],
+Cell[CellGroupData[{
+Cell[2394, 67, 2766, 41, 62, "Input"],
+Cell[5163, 110, 449, 9, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5649, 124, 334, 8, 41, "Input"],
+Cell[5986, 134, 1139, 30, 247, "Output"]
+}, Open  ]],
+Cell[7140, 167, 304, 6, 30, "Text"],
+Cell[CellGroupData[{
+Cell[7469, 177, 365, 10, 41, "Input"],
+Cell[7837, 189, 702, 14, 40, "Output"]
+}, Open  ]],
+Cell[8554, 206, 404, 13, 51, "Text"],
+Cell[CellGroupData[{
+Cell[8983, 223, 402, 12, 41, "Input"],
+Cell[9388, 237, 466, 13, 41, "Print"]
+}, Open  ]],
+Cell[9869, 253, 2135, 69, 298, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
