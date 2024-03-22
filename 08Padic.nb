@@ -1,0 +1,147 @@
+Notebook[{Cell[
+CellGroupData[{Cell[
+TextData[{"Math 2325\nProject 6 (Chapter 8) - ",Cell[
+BoxData[
+FormBox["p",TraditionalForm]],ExpressionUUID -> "11ea15e7-d857-4697-a89e-97b56a2ae067"],"-adic Numbers"}],
+"Subtitle",CellChangeTimes -> {{3.558913955534192`*^9,3.5589139674298725`*^9},{3.561845197594672`*^9,3.5618452247859955`*^9},{3.561861129451603`*^9,3.5618611300912037`*^9}},
+ExpressionUUID -> "6475437b-8e06-4c02-8294-fca8158d48a0"],Cell[
+"\<Helmut Knaust, Department of Mathematical Sciences, UTEP, El Paso TX 79968
+hknaust@utep.edu
+11/10/2012. Last edits 11/21/2012\>",
+"Subsubtitle",CellChangeTimes -> {{3.4243288721848`*^9,3.4243288949948`*^9},{3.4298122889207277`*^9,3.429812343379035`*^9},{3.431276097858964`*^9,3.431276106546575`*^9},{3.44080958371725`*^9,3.44080958530825`*^9},{3.44081276583045`*^9,3.44081276615805`*^9},{3.495966581959772`*^9,3.4959665855945787`*^9},{3.5552348211639423`*^9,3.555234823779092`*^9},{3.5589132801235604`*^9,3.558913290738168`*^9},{3.5589661768281546`*^9,3.558966177045167`*^9},{3.5599293203619595`*^9,3.5599293228224516`*^9},{3.561845236704624`*^9,3.5618452572814198`*^9},{3.5624171444119334`*^9,3.562417144836958`*^9},{3.562518350441164`*^9,3.56251835090917`*^9}},
+ExpressionUUID -> "80ee2fc5-4807-4f7e-860a-0937172f0206"],Cell[
+CellGroupData[{Cell[
+
+"\<Factoring Integers\>","Section",CellChangeTimes -> {{3.44081200337465`*^9,3.44081201407065`*^9},{3.461246275651105`*^9,3.4612462763375053`*^9}},
+ExpressionUUID -> "3637122e-cd94-4d73-a2c7-fc0492f3faf8"],Cell[
+"\<The following command displays the prime factorization of an integer.\>",
+"Text",CellChangeTimes -> {{3.561843963085393`*^9,3.5618439907652926`*^9},3.7015208926670666`*^9},
+ExpressionUUID -> "d1d96a4c-1e9d-4cfb-845e-870d677ea842"],Cell[
+BoxData[RowBox[{RowBox[
+{"PrimeFactorization","[","nr_","]"}],":=",RowBox[{"Module","[",RowBox[{RowBox[{"{","fd","}"}],",",RowBox[
+{RowBox[{"fd","=",RowBox[{"FactorInteger","[","nr","]"}]}],";",RowBox[{"Print","[",RowBox[
+{"nr",",","\" = \"",",",RowBox[{"If"," ","[",RowBox[{RowBox[{RowBox[{"Length","[","fd","]"}],">","1"}],",",RowBox[
+{"CenterDot","@@",RowBox[{"(",RowBox[{"Superscript","@@@","fd"}],")"}]}],",",RowBox[
+{"(",RowBox[{"Superscript","@@",RowBox[{"fd","[",RowBox[{"[","1","]"}],"]"}]}],")"}]}],"]"}]}]," ","]"}]}]}],"]"}]}]],
+"Input",CellChangeTimes -> {{3.461246145500305`*^9,3.461246225653105`*^9},{3.561844075583744`*^9,3.5618440803270864`*^9},{3.561844125170396`*^9,3.561844135203189`*^9},{3.5618444175612993`*^9,3.5618444256116734`*^9},3.561844459965748`*^9},
+CellLabel -> "In[7]:= ",ExpressionUUID -> "a60e555f-232c-46c3-9ac2-2c3430768897"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"PrimeFactorization","[","99999","\[InvisibleSpace]","]"}]],
+"Input",CellChangeTimes -> {{3.461246294901505`*^9,3.461246300221105`*^9},{3.461376327828005`*^9,3.461376355970405`*^9}},
+CellLabel -> "In[8]:= ",ExpressionUUID -> "a3523de2-13b1-4918-822c-f06396976e2e"],Cell[
+BoxData[
+InterpretationBox[RowBox[{"99999","\[InvisibleSpace]","\" = \"","\[InvisibleSpace]",RowBox[
+{TemplateBox[{"3","2"},"Superscript",SyntaxForm -> SuperscriptBox],"\[CenterDot]",TemplateBox[
+{"41","1"},"Superscript",SyntaxForm -> SuperscriptBox],"\[CenterDot]",TemplateBox[
+{"271","1"},"Superscript",SyntaxForm -> SuperscriptBox]}]}],SequenceForm[99999," = ",
+CenterDot[Superscript[3,2],Superscript[41,1],Superscript[271,1]]],Editable -> False],
+StandardForm],"Print",ExpressionUUID -> "fed2692f-189d-4fbd-9f83-76875a43f6e1"]},
+Open],ExpressionUUID -> "755c7dd1-9cf4-4123-a9d5-247c6d4c564b"],Cell[
+"\<The command also works for rational numbers:\>",
+"Text",CellChangeTimes -> {{3.5618441567032194`*^9,3.5618441766419363`*^9}},ExpressionUUID -> "d779b217-45b3-499a-9e17-949d828d1111"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"PrimeFactorization","[",RowBox[{"1000","/","555"}],"]"}]],
+"Input",CellChangeTimes -> {{3.5618440262311387`*^9,3.5618440603395157`*^9},3.5618441493393116`*^9,{3.561844182586108`*^9,3.5618442021971936`*^9},{3.5618444795762043`*^9,3.5618444845061207`*^9}},
+CellLabel -> "In[9]:= ",ExpressionUUID -> "fd4f4caf-360a-4c29-9389-ea37281ad18c"],Cell[
+BoxData[
+InterpretationBox[RowBox[{FractionBox["200","111"],"\[InvisibleSpace]","\" = \"","\[InvisibleSpace]",RowBox[
+{TemplateBox[{"2","3"},"Superscript",SyntaxForm -> SuperscriptBox],"\[CenterDot]",TemplateBox[
+{"3",RowBox[{"-","1"}]},"Superscript",SyntaxForm -> SuperscriptBox],"\[CenterDot]",TemplateBox[
+{"5","2"},"Superscript",SyntaxForm -> SuperscriptBox],"\[CenterDot]",TemplateBox[
+{"37",RowBox[{"-","1"}]},"Superscript",SyntaxForm -> SuperscriptBox]}]}],SequenceForm[
+Rational[200,111]," = ",CenterDot[Superscript[2,3],Superscript[3,-1],Superscript[
+5,2],Superscript[37,-1]]],Editable -> False],StandardForm],"Print",ExpressionUUID -> "00736e5d-6f88-4ed8-bf8d-67483e1b4794"]},
+Open],ExpressionUUID -> "6444ea3f-f96f-4692-aee9-d70ae29a3f24"]},Open],ExpressionUUID -> "e1a2f921-4912-44cc-8a9d-6e9ca7865973"],Cell[
+CellGroupData[
+{Cell[
+TextData[{"Computing ",Cell[
+BoxData[FormBox["p",TraditionalForm]],ExpressionUUID -> "695182d5-69a9-450c-8c7c-2851bb7c5f03"],"-adic Norms"}],
+"Section",CellChangeTimes -> {{3.561845025497327`*^9,3.5618450461826615`*^9}},ExpressionUUID -> "721a63e7-cb54-4156-b4d6-2e245823a057"],Cell[
+TextData[
+{"The next command computes the p - adic norm of a rational number ",Cell[
+BoxData[
+FormBox["x",TraditionalForm]],ExpressionUUID -> "24379cb7-342c-493d-bd2f-4a98697bf25c"],"."}],
+"Text",CellChangeTimes -> {{3.5618445807330885`*^9,3.5618446075668087`*^9},{3.5618446683483047`*^9,3.561844673637044`*^9},{3.5618447703551455`*^9,3.5618447782491503`*^9},{3.561845061002472`*^9,3.561845062000859`*^9}},
+ExpressionUUID -> "2f53fef3-dad6-4c37-ae7a-25bff11a91af"],Cell[
+BoxData[RowBox[{RowBox[
+{"PadicNorm","[",RowBox[{"x_",",",RowBox[{"p_:","5"}]}],"]"}],":=",RowBox[{"Module","[",RowBox[
+{RowBox[{"{",RowBox[{"a","=",RowBox[{"Cases","[",RowBox[{RowBox[{"FactorInteger","[","x","]"}],",",RowBox[
+{"{",RowBox[{"p",",","_"}],"}"}]}],"]"}]}],"}"}],",","\[IndentingNewLine]",RowBox[
+{"If","[",RowBox[{RowBox[{"a","===",RowBox[{"{","}"}]}],",",RowBox[{"If","[",RowBox[
+{RowBox[{"x","\[Equal]","0"}],",","0",",","1"}],"]"}],",",RowBox[{"First","[",RowBox[
+{"1","/",RowBox[{"Power","@@@","a"}]}],"]"}]}],"]"}]}],"]"}]}]],"Input",CellChangeTimes -> {3.561844767437796`*^9,3.561844852789773`*^9,{3.561845616745201`*^9,3.561845617306819`*^9},3.562417160022826`*^9,{3.562417258254445`*^9,3.562417268150011`*^9}},
+CellLabel -> "In[10]:= ",ExpressionUUID -> "507cf790-9808-432a-b357-71560183c514"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"PadicNorm","[",RowBox[{RowBox[{"1","/","15"}],",","3"}],"]"}]],
+"Input",CellChangeTimes -> {{3.561844736314068`*^9,3.5618447844270673`*^9}},CellLabel -> "In[11]:= ",
+ExpressionUUID -> "11e17b45-ec8d-4ffa-aaf6-535efb368ac0"],Cell[
+BoxData["3",StandardForm],
+"Output",CellLabel -> "Out[11]= ",ExpressionUUID -> "500c0b09-e2a4-4282-ac28-9c97d8d7964c"]},
+Open],ExpressionUUID -> "dc5db983-7e88-4afc-b272-442e904e470a"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"PadicNorm","[",RowBox[{"18",",","3"}],"]"}]],"Input",CellChangeTimes -> {{3.561844736314068`*^9,3.56184480126033`*^9}},
+CellLabel -> "In[12]:= ",ExpressionUUID -> "c76f0bb3-db22-4e18-a198-32bdd80a5b4b"],Cell[
+BoxData[
+FractionBox["1","9"],StandardForm],"Output",CellLabel -> "Out[12]= ",ExpressionUUID -> "45a2b33b-6855-407b-ae21-fd6ce0a56828"]},
+Open],ExpressionUUID -> "066ceedf-0190-4c02-8786-782d92cdf88f"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"PadicNorm","[",RowBox[{RowBox[{"21","/","20"}],",","3"}],"]"}]],
+"Input",CellChangeTimes -> {{3.561844736314068`*^9,3.5618447844270673`*^9},{3.5618448245835266`*^9,3.5618448340064096`*^9}},
+CellLabel -> "In[13]:= ",ExpressionUUID -> "9d5687b1-7c69-4267-84dd-0663fdfa4ce5"],Cell[
+BoxData[
+FractionBox["1","3"],StandardForm],"Output",CellLabel -> "Out[13]= ",ExpressionUUID -> "8aa5e0a1-e185-4a8b-a0e6-17e6763fd9fa"]},
+Open],ExpressionUUID -> "b41944a1-651d-4811-a052-172841757f78"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"PadicNorm","[",RowBox[{"2",",","7"}],"]"}]],"Input",CellChangeTimes -> {{3.561845414220438`*^9,3.56184544397021`*^9},3.5624172424315395`*^9,{3.56241727722853`*^9,3.5624173105724373`*^9}},
+CellLabel -> "In[14]:= ",ExpressionUUID -> "af5bd2ad-4223-4fc1-a010-fad63a08682f"],Cell[
+BoxData[
+"1",StandardForm],"Output",CellLabel -> "Out[14]= ",ExpressionUUID -> "dc62c753-e3c7-488a-83a1-b40ba7d8dd92"]},
+Open],ExpressionUUID -> "b6e9e78a-386f-4cc4-9795-0a1582486ad0"],Cell[
+TextData[{"The default for ",Cell[
+BoxData[
+FormBox["p",TraditionalForm]],ExpressionUUID -> "abdcb590-fc8e-43e4-b59b-5b668f7aa43a"]," is 5."}],
+"Text",CellChangeTimes -> {{3.561845067632386`*^9,3.5618450901740975`*^9}},ExpressionUUID -> "afe41a11-ae92-4efe-a305-26749b004e29"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{"PadicNorm","[",RowBox[{"21","/","20"}],"]"}]],"Input",CellChangeTimes -> {{3.561844837750602`*^9,3.5618448428052607`*^9},{3.5618448807308054`*^9,3.5618448815888495`*^9},{3.561846244510538`*^9,3.5618462457117844`*^9}},
+CellLabel -> "In[15]:= ",ExpressionUUID -> "5378e9e3-25b3-4ffc-be08-5a9548f53a02"],Cell[
+BoxData[
+"5",StandardForm],"Output",CellLabel -> "Out[15]= ",ExpressionUUID -> "f3d74dba-0c81-4782-acf3-48114f30432f"]},
+Open],ExpressionUUID -> "6a40d08f-5a24-49c3-baea-aa700ccc2f17"],Cell[
+TextData[{"The last command is adapted from ",ButtonBox[
+"http://mathworld.wolfram.com/notebooks/Algebra/p-adicNorm.nb ",BaseStyle -> "Hyperlink",
+RuleDelayed[ButtonData,{URL["http://mathworld.wolfram.com/notebooks/Algebra/p-adicNorm.nb"],None}]],Cell[
+BoxData[
+FormBox[StyleBox[RowBox[{"by"," "}],FontFamily -> "Arial"],TraditionalForm]],ExpressionUUID -> "41160185-1786-4917-9ca6-822342c713d2"],"Eric W. Weisstein."}],
+"Text",CellChangeTimes -> {{3.561844920323475`*^9,3.561844937327257`*^9},{3.5618449784171305`*^9,3.5618449948437195`*^9},{3.561861204176734`*^9,3.5618612782974644`*^9},{3.5624171520063677`*^9,3.562417153707465`*^9}},
+ExpressionUUID -> "c2e50f69-cf5b-45b5-8d9a-690902eeea32"]},Open],ExpressionUUID -> "032b1c59-669c-4557-ac62-5fe636a817a3"],Cell[
+CellGroupData[
+{Cell[
+"\<Checking Divisibility\>","Section",CellChangeTimes -> {{3.561845025497327`*^9,3.5618450461826615`*^9},{3.56251804203981`*^9,3.5625180470318737`*^9}},
+ExpressionUUID -> "c35155bb-53e2-4551-977e-af2ac0fca497"],Cell[
+TextData[{"The command below checks for which integer values of ",Cell[
+BoxData[
+FormBox[RowBox[{RowBox[{"x",Cell[
+"\<\>",ExpressionUUID -> "0baa0961-afcd-4c70-a73f-361d3fc63176"]}],","," ",RowBox[
+{"the"," ","expression","  "}]}],TraditionalForm]],ExpressionUUID -> "fd50de78-7169-45c6-ac2a-a9039fe0ffb5"],Cell[
+BoxData[
+FormBox[RowBox[{RowBox[{"3","x"}],"-","2"}],TraditionalForm]],ExpressionUUID -> "f583d99a-99eb-453b-a2c3-653f9ae259fc"]," is divisible by 5. (You can change the \[OpenCurlyDoubleQuote]3x-2\[CloseCurlyDoubleQuote] and the \[OpenCurlyDoubleQuote]5\[CloseCurlyDoubleQuote])."}],
+"Text",CellChangeTimes -> {{3.5625181907409163`*^9,3.56251832053458`*^9}},ExpressionUUID -> "88b50baa-de4e-45c5-b375-43e2b8a2dd11"],Cell[
+CellGroupData[
+{Cell[
+BoxData[RowBox[{RowBox[{"Solve","[",RowBox[{RowBox[{RowBox[{RowBox[{"3","x"}],"-","2"}],"\[Equal]","0"}],",",RowBox[
+{"Modulus","\[Rule]","5"}]}],"]"}],"[",RowBox[{"[","1","]"}],"]"}]],"Input",CellChangeTimes -> {{3.562518050292316`*^9,3.562518079636292`*^9},{3.5625181426455`*^9,3.5625181783231573`*^9}},
+CellLabel -> "In[16]:= ",ExpressionUUID -> "3bc45af3-246d-434a-8815-66c1e0611608"],Cell[
+BoxData[
+RowBox[{"{",RowBox[{"x","\[Rule]","4"}],"}"}],StandardForm],"Output",CellLabel -> "Out[16]= ",
+ExpressionUUID -> "fbcabb69-f468-424a-92b7-6222f828fea6"]},Open],ExpressionUUID -> "8b07b40b-5f5e-47b9-ba4d-a8e3207ee4a9"]},
+Open],ExpressionUUID -> "69abf3b1-afbb-405f-a668-829c6d74502c"]},Open],ExpressionUUID -> "02f3b277-ea6c-4ada-9ca4-627d4167edc1"]},
+StyleDefinitions -> FrontEnd`FileName[{"Creative"},"NaturalColor.nb",CharacterEncoding -> "UTF-8"],
+WindowSize -> {1215,893},WindowMargins -> {{37,Automatic},{Automatic,12}},FrontEndVersion -> "13. for Wolfram Cloud 1.61.2 (November 30, 2021)",
+CellContext -> Notebook]
